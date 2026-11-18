@@ -11,7 +11,7 @@ Starting with iOS 27.3 (in beta as of November 2026), Apple puts a daily, per-de
 - **`SessionReport`** gives the numbers to watch: completed, degraded, no route, refused attempts, paid calls and spend per completed task.
 - **`QuotaCopy`** turns a result into a message that tells the user the truth, including roughly when a paused feature comes back.
 
-Article: (added after publish)
+Article: [Apple Put a Meter on AI. Your Private Cloud Compute Feature Is About to Run on a Budget You Can't Read.](https://medium.com/@er.rajatlakhina/your-private-cloud-compute-feature-is-about-to-run-on-a-budget-you-cant-read-1858086bd57f)
 
 ![Three iOS Simulator screenshots: the cloud-first evening with "Plan my day" blocked at 20:00, the meter-aware evening where it is re-routed to the paid tier, and the Compare screen showing 13/14 versus 14/14 completed](docs/simulator.png)
 
@@ -97,7 +97,7 @@ Requirements: iOS 17+ / macOS 14+, Swift 5.9 tools. Built and tested locally wit
 - `swift build -Xswiftc -warnings-as-errors` (clean build after `rm -rf .build`): passes on macOS with Xcode.
 - `swift test`: **29 tests, 0 failures**.
 - iOS Simulator: built with `xcodebuild` and run headless on a dedicated new iPhone 18 Pro simulator (iOS 27.2). `Scripts/simulator-screenshots.sh` launched the app six times by launch argument, checked the process was still alive after each launch, and saved the screenshots in `Demo/Screenshots/`.
-- CI: `.github/workflows/ci.yml` runs the build, tests and Simulator script on pushes to `main` and on pull requests (code changes only). Result for this version: (filled in after the first run)
+- CI: `.github/workflows/ci.yml` runs the build, tests and Simulator script on pushes to `main` and on pull requests (code changes only). Result for the initial commit: **green** ([run 44274995129](https://github.com/rajatslakhina/apple-ai-meter-article-demo/actions/runs/44274995129)), `library` and `demo-on-simulator` jobs on the macos-15 runner with Xcode 16.4: 29 tests, 0 failures, and the app built, launched six times and screenshotted on an iPhone 17 Pro simulator.
 
 ## Sources
 
